@@ -1,0 +1,53 @@
+{
+  "items": [
+    {
+      "timestamp": "2022-11-28T10:50:27+08:00",
+      "carpark_data": [
+        {
+          "carpark_info": [
+            {
+              "total_lots": "105",
+              "lot_type": "C",
+              "lots_available": "26"
+            }
+          ],
+          "carpark_number": "HE12",
+          "update_datetime": "2022-11-28T10:49:12"
+        },
+        {
+          "carpark_info": [
+            {
+              "total_lots": "583",
+              "lot_type": "C",
+              "lots_available": "106"
+            }
+          ],
+          "carpark_number": "HLM",
+          "update_datetime": "2022-11-28T10:49:11"
+        },
+        {
+          "carpark_info": [
+            {
+              "total_lots": "329",
+              "lot_type": "C",
+              "lots_available": "187"
+            }
+          ],
+          "carpark_number": "RHM",
+          "update_datetime": "2022-11-28T10:49:12"
+        },
+        {
+          "carpark_info": [
+            {
+              "total_lots": "97",
+              "lot_type": "C",
+              "lots_available": "0"
+            }
+          ],
+          "carpark_number": "BM29",
+          "update_datetime": "2022-11-28T10:49:33"
+        }
+      ]
+    }
+  ]
+}
