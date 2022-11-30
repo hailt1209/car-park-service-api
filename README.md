@@ -20,9 +20,21 @@ First of all, we need to extract, transform, and load the car park information i
 - CarParkLoader: This will create a batch job to read the CSV and insert data into our database in chunks.
 - CarParkAvailabilityLoader: this will create another batch job to retrieve data from the REST endpoint and upsert (update an existing row if a specified value already exists, and insert a new row if the specified value doesn't already exist) into our database in chunks. 
 
+These 2 components above should scheduled and run in the background to sync the data, but it is temporarily out of scope now.
+
 To initiate the data, when the application is started it will trigger CarParkLoader to load car park data if the data doesn't already exist. Once CarParkLoader finishes, it will also trigger CarParkAvailabilityLoader to load the availability of car parks.
 
+To manually sync the availability of car parks, we can use the endpoint
+```
+[GET] {host}:{port}/car-park-availability/load
+```
+
 To get the closest car parks together with each parking lot’s availability, we will query the data in our database, calculate the distance between the user's location and the car park's location and then sort it according.
+
+The endpoint 
+```
+[GET] {host}:{port}/carparks/nearest?latitude={lat}&longitude={long}&page={page index}&per_page={page size}
+```
 
 ## Building from Source
 Car Park Service Api uses a Maven-based build system
